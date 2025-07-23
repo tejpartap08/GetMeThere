@@ -2,328 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GetMeThere! - Your Real-Time Transport Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GetMeThere - Live Transport Tracker</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
-  <!-- Leaflet CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-oH+mP+tv6cRfCkSTGfFVhYwrV3DxOro2zRkz1Wolflw="
-    crossorigin=""
-  />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
+    <h1>GetMeThere</h1>
     <nav>
-      <div class="logo">
-        <img src="logo.png" alt="GetMeThere! Logo" />
-        <span>GetMeThere!</span>
-      </div>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#technology">Technology</a></li>
-        <li><a href="#security">Security</a></li>
-        <li><a href="#live-tracking">Live Tracking</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#live-tracking">Live Tracking</a>
+      <a href="#route-planner">Route Planner</a>
+      <a href="#notifications">Notifications</a>
+      <a href="#discounts">Discounts</a>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1>GetMeThere! - Your Real-Time Transport Tracker</h1>
-        <p>Faster, More Reliable, and More Efficient Transport Tracking</p>
-        <a href="#download" class="btn-primary">Download Now</a>
-      </div>
-      <div class="hero-image">
-        <img src="app-mockup.png" alt="GetMeThere! App Mockup" />
-      </div>
-    </section>
-
-    <section id="problem-solution" class="section-padded">
-      <h2>Tired of Unreliable Transport Apps?</h2>
-      <div class="problem-solution-grid">
-        <div class="problem">
-          <h3>The Problem</h3>
-          <ul>
-            <li>Defective real-time GPS tracking leading to unreliable arrival times.</li>
-            <li>Non-intuitive user interfaces that are difficult to navigate.</li>
-            <li>Lack of essential features like multi-modal options and live traffic updates.</li>
-          </ul>
-        </div>
-        <div class="solution">
-          <h3>The GetMeThere! Solution</h3>
-          <ul>
-            <li><strong>Accurate Real-Time GPS Tracking:</strong> Precise location for accurate bus arrival times.</li>
-            <li><strong>User-Friendly Interface:</strong> Intuitive design for effortless navigation.</li>
-            <li><strong>Feature-Rich Experience:</strong> Multi-modal planning, live traffic, personalized recommendations, and more!</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="features" class="section-padded bg-light">
-      <h2>GetMeThere! - Packed with Features for a Seamless Commute</h2>
-      <div class="features-grid">
-        <div class="feature-item">
-          <h3>
-            <img src="icon-gps.png" alt="GPS Icon" />
-            Accurate Real-Time GPS Tracking
-          </h3>
-          <p>Displays precise location of transport services for reliable predictions.</p>
-        </div>
-        <div class="feature-item">
-          <h3>
-            <img src="icon-ai.png" alt="AI Icon" />
-            AI-Powered Estimated Arrival Times
-          </h3>
-          <p>Provides highly accurate predictions for arrivals, minimizing your wait time.</p>
-        </div>
-        <div class="feature-item">
-          <h3>
-            <img src="icon-multi-modal.png" alt="Multi-Modal Icon" />
-            Multi-Modal Transport Recommendations
-          </h3>
-          <p>Suggests optimal routes using various transport options (bus, train, ferry).</p>
-        </div>
-        <div class="feature-item">
-          <h3>
-            <img src="icon-alert.png" alt="Alert Icon" />
-            Customizable Alerts
-          </h3>
-          <p>Notifies you of upcoming departures, delays, and service changes.</p>
-        </div>
-        <div class="feature-item">
-          <h3>
-            <img src="icon-crowd.png" alt="Crowd Icon" />
-            Real-time Crowd Data
-          </h3>
-          <p>Shows if transport is full or has available space, helping you choose.</p>
-        </div>
-        <div class="feature-item">
-          <h3>
-            <img src="icon-route.png" alt="Route Icon" />
-            Smart-Route Recommendations
-          </h3>
-          <p>Adjusts routes based on real-time traffic disruptions and road closures.</p>
-        </div>
-      </div>
-      <h3>Additional Features</h3>
-      <ul class="additional-features-list">
-        <li><strong>Offline Mode:</strong> Access essential information even without an internet connection.</li>
-        <li><strong>Gamification Rewards:</strong> Incentives for frequent app use.</li>
-        <li><strong>AI-Driven Personalized Route Suggestions:</strong> Tailored recommendations based on your preferences.</li>
-        <li><strong>Traffic Alert System:</strong> Provides information on significant delays or closed roads (future update).</li>
-        <li><strong>Student Discount Tracker:</strong> Shows available discounts for students on different transport routes (future update).</li>
-        <li><strong>Integration with popular apps:</strong> Such as Calendar or Reminders for seamless planning.</li>
-      </ul>
-    </section>
-
-    <section id="about" class="section-padded">
-      <h2>Our Mission: Revolutionizing Your Daily Commute</h2>
-      <div class="about-content">
-        <p>
-          <strong>GetMeThere</strong> is a real-time transport tracker designed to be faster,
-          more reliable, and more efficient than existing apps. We aim to eliminate the frustration
-          of slow updates, late details, and inaccurate information by providing superior tracking,
-          real-time accuracy, and a wealth of additional features.
-        </p>
-        <h3>The Client - Shaurya Thakur</h3>
-        <p>
-          Shaurya Thakur, a Year 12 student at Quakers Hill High School, conceived "GetMeThere"
-          out of his personal frustration with unreliable existing transport apps like Transit.
-          His daily commute struggles highlighted the need for an app with accurate GPS tracking,
-          reliable estimated arrival times, and a user-friendly interface. His vision drives the
-          core functionality of GetMeThere.
-        </p>
-        <h3>The End-Users</h3>
-        <p>
-          Our primary end-users are high school students aged 13-17 who rely on public transportation
-          for their daily commuting needs. They are tech-savvy and expect efficiency, reliability,
-          and an intuitive user-friendly experience. GetMeThere is built to meet their demands for
-          real-time GPS tracking, precise arrival times, and an easy-to-navigate interface.
-        </p>
-      </div>
-    </section>
-
-    <section id="technology" class="section-padded bg-light">
-      <h2>Built for Performance: The Technology Behind GetMeThere!</h2>
-      <h3>Development Methodology: Agile Software Development</h3>
-      <p>
-        We embrace an Agile approach for its flexibility, continuous feedback loops, and iterative
-        improvements. This methodology allows for ongoing testing and refinement of features based
-        on real-world insights, ensuring a robust and user-centric application.
-      </p>
-      <h3>Tools and Resources</h3>
-      <div class="tech-grid">
-        <div class="tech-item">
-          <h4>Primary Framework:</h4>
-          <p><strong>Flutter (Dart):</strong> For robust cross-platform development (Android and iOS), ensuring a consistent user experience.</p>
-        </div>
-        <div class="tech-item">
-          <h4>Backend:</h4>
-          <p><strong>Node.js (JavaScript/TypeScript):</strong> Powers our API requests and manages real-time updates efficiently.</p>
-        </div>
-        <div class="tech-item">
-          <h4>Database:</h4>
-          <p><strong>Firebase (NoSQL):</strong> Utilized for GPS tracking and transport schedules, enabling seamless real-time syncing.</p>
-        </div>
-        <div class="tech-item">
-          <h4>Cloud Computing:</h4>
-          <p><strong>AWS:</strong> Leveraged for our AI-powered transport prediction models, ensuring high scalability and performance.</p>
-        </div>
-        <div class="tech-item">
-          <h4>APIs:</h4>
-          <ul>
-            <li><strong>Google Maps API:</strong> For precise route navigation and live location tracking.</li>
-            <li><strong>Transport NSW API:</strong> For real-time public transport data specific to New South Wales.</li>
-            <li><strong>Open Weather API:</strong> For weather-based travel recommendations and alerts.</li>
-          </ul>
-        </div>
-        <div class="tech-item">
-          <h4>Project Management & Version Control:</h4>
-          <p><strong>Trello:</strong> For streamlined project management. <strong>GitHub:</strong> For collaborative version control.</p>
-        </div>
-      </div>
-      <h3>Performance and Accessibility Goals</h3>
-      <ul>
-        <li><strong>Fast Performance:</strong> App response time within 2-3 seconds, GPS tracking refresh every 5-10 seconds, and instant notifications.</li>
-        <li><strong>Inclusive Design:</strong> Voice control, high-contrast mode, and multi-language support for diverse users.</li>
-      </ul>
-    </section>
-
-    <section id="security" class="section-padded">
-      <h2>Your Data, Our Priority: Ensuring GetMeThere! is Secure</h2>
-      <h3>Key Data Security Considerations:</h3>
-      <ul>
-        <li><strong>User Authentication & Location Tracking:</strong> Balancing user privacy with essential real-time tracking.</li>
-        <li><strong>User Consent & Data Privacy:</strong> Users are asked for explicit permissions to access location data and can disable tracking at any time.</li>
-        <li><strong>Secure Data Storage & Transmission:</strong> Protection against unencrypted storage of sensitive data.</li>
-        <li><strong>Unauthorized Access & Account Security:</strong> Preventing attackers from stealing or manipulating data.</li>
-      </ul>
-      <h3>Security Measures Implemented:</h3>
-      <ul>
-        <li><strong>End-to-End Encryption:</strong> All stored data is protected using Firebase Firestore encryption.</li>
-        <li><strong>Secure Connections:</strong> Data transfers occur over HTTPS (SSL/TLS) to prevent interception.</li>
-        <li><strong>Strong Authentication:</strong> Firebase Authentication with Google Sign-In, Two-Factor Authentication (2FA), and email verification.</li>
-        <li><strong>Access Control:</strong> Firebase Firestore Rules restrict access, ensuring users only view their own information.</li>
-        <li><strong>Ethical AI-driven estimations:</strong> Secure and transparent methods are employed to maintain user trust.</li>
-      </ul>
-    </section>
-
-    <!-- NEW: Live Tracking Section -->
-    <section id="live-tracking" class="section-padded bg-light">
-      <h2>Live Transport Tracking</h2>
-
-      <div class="live-tracking-grid">
-        <!-- Map container -->
-        <div id="map" aria-label="Live transport map" tabindex="0"></div>
-
-        <!-- Arrival Times Panel -->
-        <div class="arrival-panel" aria-live="polite" aria-atomic="true">
-          <h3>Upcoming Arrivals</h3>
-          <ul id="arrival-times-list">
-            <!-- JS will populate -->
-          </ul>
-        </div>
-      </div>
-
-      <!-- Notifications Toggles -->
-      <div class="notifications-section">
-        <h3>Customizable Notifications</h3>
-        <label>
-          <input type="checkbox" id="notify-arrival" />
-          Notify me for bus/train arrivals
-        </label><br />
-        <label>
-          <input type="checkbox" id="notify-delays" />
-          Notify me for delays or service changes
-        </label>
-      </div>
-
-      <!-- Route Planner -->
-      <div class="route-planner">
-        <h3>Plan Your Route</h3>
-        <form id="route-form" aria-label="Route planner form">
-          <label for="from">From:</label>
-          <select id="from" required>
-            <option value="">Select start</option>
-            <option>Quakers Hill</option>
-            <option>Blacktown</option>
-            <option>Parramatta</option>
-            <option>Sydney Central</option>
-          </select>
-
-          <label for="to">To:</label>
-          <select id="to" required>
-            <option value="">Select destination</option>
-            <option>Quakers Hill</option>
-            <option>Blacktown</option>
-            <option>Parramatta</option>
-            <option>Sydney Central</option>
-          </select>
-
-          <button type="submit" class="btn-primary">Get Route</button>
-        </form>
-        <p id="route-result" aria-live="polite" style="margin-top: 10px;"></p>
-      </div>
-
-      <!-- Traffic Alert Banner -->
-      <div id="traffic-alert" class="traffic-alert" role="alert" aria-live="assertive" hidden>
-        ⚠️ Traffic Alert: Major delay on Parramatta line due to track maintenance.
-      </div>
-
-      <!-- Student Discount Tracker -->
-      <div class="student-discount">
-        <h3>Student Discounts Available</h3>
+    <section id="live-tracking">
+      <h2>Live Tracking</h2>
+      <div id="map">🗺️ Map will load here...</div>
+      <div id="arrivals">
+        <h3>Upcoming Arrivals</h3>
         <ul>
-          <li>Train: 30% off during off-peak hours</li>
-          <li>Bus: 25% off with valid student ID</li>
-          <li>Ferry: 20% discount for students</li>
+          <li>Bus 731 – arriving in 3 mins</li>
+          <li>Bus 752 – arriving in 5 mins</li>
         </ul>
       </div>
     </section>
 
-    <section id="contact" class="section-padded bg-light">
-      <h2>Contact Us</h2>
-      <p>Have questions, feedback, or need support? Reach out to us!</p>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="btn-primary">Send Message</button>
+    <section id="route-planner">
+      <h2>Plan Your Route</h2>
+      <form id="planner-form">
+        <label for="from">From:</label>
+        <select id="from">
+          <option value="">Select...</option>
+          <option value="quakers">Quakers Hill</option>
+          <option value="blacktown">Blacktown</option>
+        </select>
+
+        <label for="to">To:</label>
+        <select id="to">
+          <option value="">Select...</option>
+          <option value="quakers">Quakers Hill</option>
+          <option value="blacktown">Blacktown</option>
+        </select>
+
+        <button type="submit">Plan Route</button>
       </form>
-      <p>
-        Alternatively, you can email us at:
-        <a href="mailto:info@getmethere.com">info@getmethere.com</a>
-      </p>
-      <div class="social-links">
-        <a href="#" target="_blank"><img src="icon-facebook.png" alt="Facebook" /></a>
-        <a href="#" target="_blank"><img src="icon-twitter.png" alt="Twitter" /></a>
-      </div>
+      <div id="planner-result"></div>
+    </section>
+
+    <section id="notifications">
+      <h2>Custom Notifications</h2>
+      <label><input type="checkbox" /> Notify me when Bus 731 is 2 mins away</label>
+    </section>
+
+    <section id="alerts">
+      <h2>⚠️ Alerts</h2>
+      <p>Blacktown Station is currently delayed due to heavy traffic.</p>
+    </section>
+
+    <section id="discounts">
+      <h2>Student Discounts</h2>
+      <p>Use your Opal card during off-peak hours to save 30%!</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 GetMeThere! All rights reserved.</p>
+    <p>&copy; 2025 GetMeThere | School Project</p>
   </footer>
-
-  <!-- Leaflet JS -->
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-oA+q5pMgcTFPYp+qW8Vvf3M5oRe8w+Vt9lgHdzpGZqs="
-    crossorigin=""
-  ></script>
-  <script src="script.js"></script>
 </body>
 </html>
